@@ -104,11 +104,12 @@
 </head>
 <body>
 
-<!-- 🎶 Background Music -->
-<audio autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
-  <!-- 💡 Replace this link with your own MP3 file if needed -->
+ <!-- 🎶 Background Music -->
+<audio id="bgMusic" loop>
+  <source src="bensound-romantic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
+
 
 <!-- 🌟 Start Page -->
 <div id="startPage">
@@ -138,10 +139,13 @@
 </div>
 
 <!-- 🎈 Flower Petal and Balloon Animations -->
-<script>
+ <script>
   function startSurprise() {
     document.getElementById("startPage").style.display = "none";
     document.getElementById("wishPage").style.display = "flex";
+
+    // 🎵 Start music after user interaction
+    document.getElementById("bgMusic").play();
   }
 
   const emojis = ['🎈', '🌸', '🌷', '🎉', '💐'];
